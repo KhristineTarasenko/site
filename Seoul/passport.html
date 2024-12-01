@@ -1,0 +1,71 @@
+<html>
+<head>
+    <meta charset="utf8">
+    <title>Паспорт</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+	    <!-- Навигация -->
+		<header>
+			<nav class="navbar">
+				<ul class="nav-links">
+					<li><a href="passport.html" class="active">Паспорт</a></li>
+					<li><a href="task.html">Задача</a></li>
+                    <li><a href="task_form.html">Форма для решения задачи</a></li>
+				</ul>
+			</nav>
+		</header>
+	
+
+<h1>Паспорт</h1>
+<img src="DOM.png" alt="Изображение" class="passport-img">
+    <div id="main_fon">
+
+    <h5 id="pass_title" class="poiret-one-regular">РОССИЙСКАЯ ФЕДЕРАЦИЯ</h5>
+    <div id="page_top">
+        <p class="vidanstr1">ГУ МВД РОССИИ ПО </p>
+        <p class="vidanstr2">НОВОСИБИРСКОЙ ОБЛАСТИ</p>
+        <p class="vidanstrdata">08.07.2019</p>
+        <p class="vidanstrcode">540-002</p>
+        <img class="podpis1" src="podpis1.png">
+        <img class="podpis2" src="podpis2.png">
+    </div>
+
+<div id="page_bottom">
+    <img class="passfoto" src="photo.jpg">
+    <p id="lastname" class="hfamilia">ТАРАСЕНКО</p>
+    <p id ="firstname" class="hname">ХРИСТИНА</p>
+    <p id="otchestvo" class="hotch">ГЕННАДЬЕВНА</p>
+    <p id="sex" class="hpol">ЖЕН.</p>
+    <p class="hborn">25.06.2005</p>
+    <p id ="birthplace1" class="hpborn1">ГОР. НОВОСИБИРСК</p>
+    <p id="birthplace2" class="hpborn2">РОССИЯ</p>
+</div>
+
+
+</div>
+
+ <script> // Функция для замены на заранее заданные латинизированные значения 
+    function changeToLatin() {
+        document.getElementById("lastname").textContent = "TARASENKO";
+        document.getElementById("firstname").textContent = "KHRISTINA";
+        document.getElementById("otchestvo").textContent = "GENNADYEVNA";
+        document.getElementById("sex").textContent = "female";
+        document.getElementById("birthplace1").textContent = "GOR. NOVOSIBIRSK";
+        document.getElementById("birthplace2").textContent = "RUSSIA"; 
+    }
+    function changeToCyrillic() { 
+        document.getElementById("lastname").textContent = "ТАРАСЕНКО";
+        document.getElementById("firstname").textContent = "ХРИСТИНА";
+        document.getElementById("otchestvo").textContent = "ГЕННАДЬЕВНА";
+        document.getElementById("sex").textContent = "ЖЕН.";
+        document.getElementById("birthplace1").textContent = "ГОР. НОВОСИБИРСК";
+        document.getElementById("birthplace2").textContent = "РОССИЯ"; 
+        }
+</script>
+<button onclick="changeToLatin()">Перевести на латиницу</button> 
+<button onclick="changeToCyrillic()">Перевести на кириллицу</button>
+</body>
+</html>

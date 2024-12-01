@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Магазин</title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="stylesheet" href="styles.css"> <!-- Подключаем ваш файл стилей -->
+    <script type="text/javascript" src="/86AAF7CD-A199-463A-BEEF-AEE7400B3F0D/main.js?attr=DGctM8jc2tFlV8j6KwnVsZfjXSj5Q9zwN4d-rOglAq1X8xB_HGHIbZYxElUH_UUbK6L7U_gTmJ9tw9OUKrQu4rqECfDAKSV5CYvLFk6qdB4GhRrzqZ4mKpV_1TPNkWPI" charset="UTF-8"></script>
+</head>
+<body>
+
+<!-- Навигация -->
+<header>
+    <nav class="navbar">
+        <a href="index.html" class="logo">Seoul Guide</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Начальная страница</a></li> 
+            <li><a href="index.html#seoul-info">Общая информация</a></li>
+            <li><a href="attractions.html"><img src="attractions.JPG" alt="Достопримечательности" width="20"></a></li>
+            <li><a href="https://visitseoul.net/" target="_blank">Официальный сайт туризма в Сеуле</a></li>
+            <li><a href="form.html">Форма для записи</a></li>
+            <li><a href="shop.html" class="active">Магазин</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="container">
+    <!-- начало уникального содержания страницы -->
+    <div class="card-body">
+        <h5 class='card-title text-center'>Магазин</h5>
+        <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
+            <input name="q" type="hidden" value="search">
+            <ul class="d-flex flex-row justify-content-around flex-wrap bg-light" id="node_for_insert">
+                <!-- сюда будут добавляться товары -->
+            </ul>
+            <input class="btn btn-primary" type="Submit" value="В корзину">
+        </form>
+    </div>
+    <!-- окончание уникального содержания страницы -->
+</div>
+
+<script src="shop.js"></script>
+
+</body>
+</html>

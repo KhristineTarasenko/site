@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Задача и отправка на удаленный сервер</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- Навигация -->
+        <header>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="passport.html" >Паспорт</a></li>
+					<li><a href="task.html">Задача</a></li>
+                    <li><a href="task_form.html" class="active">Форма для решения задачи</a></li>
+                </ul>
+            </nav>
+        </header>
+</head>
+<body>
+
+    <h3 align="center">Проверка неравенств: A < B < C или A < B > C и отправка результатов на удаленный сервер</h3>
+    <p>Введите значения для проверки неравенств</p>
+
+    <form action="https://www.bing.com/search?" id="UserEnter" name="UserEnter" target="_blank">
+        <li>Для поисковика:<input name="q" value="search"></li>
+        <ul>
+            <li><label>Формулировка задачи:</label>
+                <br><textarea cols="60" rows="4" id="task" name="formulation">Определить, выполняются ли неравенства A < B < C или A < B > C, и какое именно неравенство выполняется.</textarea>
+            </li>
+            <li>
+                <label for="aInput">A:</label>
+                <input id="aInput" name="a" type="number" step="any" value="1"><br>
+            </li>
+            <li>
+                <label for="bInput">B:</label>
+                <input id="bInput" name="b" type="number" step="any" value="2"><br>
+            </li>
+            <li>
+                <label for="cInput">C:</label>
+                <input id="cInput" name="c" type="number" step="any" value="3"><br>
+            </li>
+            <li>
+                <label>Результат проверки:</label>
+                <input id="resultDisplay" name="result" value="Не определен" readonly>
+            </li>
+            <li>
+                <input id="verify" type="button" value="Проверить" onclick="evaluateInequality()">
+            </li>
+            <li>
+                <input type="submit" value="Отправить">
+            </li>
+        </ul>
+    </form>
+
+    <script>
+        // Функция для оценки выполнения неравенств
+        function evaluateInequality() {
+            const a = Number(document.getElementById('aInput').value);
+            const b = Number(document.getElementById('bInput').value);
+            const c = Number(document.getElementById('cInput').value);
+            const resultDisplay = document.getElementById('resultDisplay');
+
+            // Проверяем первое неравенство A < B < C
+            if (a < b && b < c) {
+                resultDisplay.value = 'A < B < C выполняется.';
+            }
+            // Проверяем второе неравенство A < B > C
+            else if (a < b && b > c) {
+                resultDisplay.value = 'A < B > C выполняется.';
+            }
+            // Ни одно из неравенств не выполняется
+            else {
+                resultDisplay.value = 'Оба не выполняются';
+            }
+        }
+    </script>
+
+</body>

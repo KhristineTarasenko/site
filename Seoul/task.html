@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Задача</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- Навигация -->
+        <header>
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="passport.html">Паспорт</a></li>
+					<li><a href="task.html" class="active">Задача</a></li>
+                    <li><a href="task_form.html">Форма для решения задачи</a></li>
+                </ul>
+            </nav>
+        </header>
+</head>
+<body>
+
+    <h3 align="center">Решение алгоритмической задачи</h3>
+    <p id="task_content">Выполняются ли неравенства A &lt; B &lt; C или A &lt; B &gt; C?</p>
+    <p>Значение A: <span id="a">22</span></p>
+    <p>Значение B: <span id="b">20</span></p>
+    <p>Значение C: <span id="c">33</span></p>
+    <button onclick="evaluateInequality()">Оценить</button>
+
+    <p>Результат: <span id="result"></span></p>
+
+    <script>
+        // Функция для оценки выполнения неравенств
+        function evaluateInequality() {
+            const a = Number(document.getElementById('a').textContent);
+            const b = Number(document.getElementById('b').textContent);
+            const c = Number(document.getElementById('c').textContent);
+
+            // Проверяем первое неравенство A < B < C
+            if (a < b && b < c) {
+                document.getElementById('result').textContent = 'Неравенство A < B < C выполняется.';
+            }
+            // Проверяем второе неравенство A < B > C
+            else if (a < b && b > c) {
+                document.getElementById('result').textContent = 'Неравенство A < B > C выполняется.';
+            }
+            // Ни одно из неравенств не выполняется
+            else {
+                document.getElementById('result').textContent = 'Ни одно из указанных неравенств не выполняется.';
+            }
+        }
+    </script>
+
+</body>
+</html>
