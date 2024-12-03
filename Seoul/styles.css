@@ -308,3 +308,42 @@ footer p {
 .amount-input {
     width: 40px;
 }
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style-type: none; /* Убираем точки у списка */
+    padding: 0; /* Убираем отступы у ul */
+    margin: 0; /* Убираем внешние отступы у ul */
+}
+
+.product-list li {
+    flex: 1 1 calc(33.333% - 20px); /* 3 карточки в ряд с отступами */
+    max-width: calc(33.333% - 20px); /* Ограничиваем ширину карточки */
+    box-sizing: border-box; /* Учитываем padding и border в ширине */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.product-list img {
+    width: 180px;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.product-list h5 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.product-list p {
+    margin: 5px 0;
+    text-align: center;
+}
