@@ -302,11 +302,11 @@ footer p {
 }
 
 .product-list img {
-    width: 180px;
-    height: auto;
-    border-radius: 5px;
-    object-fit: cover;
-    margin-bottom: 10px;
+    width: 100%; /* Картинка займет всю ширину карточки */
+    height: auto; /* Сохраняет пропорции */
+    object-fit: cover; /* Подстраивает содержимое под размер */
+    border-radius: 5px; /* Закругляем углы */
+    margin-bottom: 10px; /* Отступ снизу */
 }
 
 .product-list h5 {
