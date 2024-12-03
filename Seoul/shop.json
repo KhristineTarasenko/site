@@ -4,7 +4,7 @@
         "name": "Керамическая чашка с изображением горы",
         "img": "mug.jpg",
         "description": "Керамическая чашка.",
-        "price": 15000,
+        "price": 900,
         "vendor_code": "KM001"
     },
     {
@@ -12,7 +12,7 @@
         "name": "Бамбуковая шляпа",
         "img": "bamboo-hat.jpg",
         "description": "Традиционная корейская бамбуковая шляпа.",
-        "price": 25000,
+        "price": 700,
         "vendor_code": "KM002"
     },
     {
@@ -20,7 +20,7 @@
         "name": "Сеульский магнит",
         "img": "seoul-magnet.jpg",
         "description": "Магнит на холодильник с видом на Сеул.",
-        "price": 5000,
+        "price": 50,
         "vendor_code": "KM003"
     },
     {
@@ -28,7 +28,7 @@
         "name": "Корейский чай в наборе",
         "img": "tea-set.jpg",
         "description": "Набор традиционного корейского чая.",
-        "price": 35000,
+        "price": 1500,
         "vendor_code": "KM004"
     },
     {
@@ -36,7 +36,16 @@
         "name": "Традиционный корейский веер",
         "img": "korean-fan.jpg",
         "description": "Красивый веер с традиционным корейским рисунком.",
-        "price": 22000,
+        "price": 1200,
         "vendor_code": "KM005"
+    },
+    {
+        "id": 6,
+        "name": "Блокнот с корейским пейзажем",
+        "img": "korean-notebook.jpg",
+        "description": "Блокнот с видом на улицы города.",
+        "price": 700,
+        "vendor_code": "KM006"
     }
+    
 ]
