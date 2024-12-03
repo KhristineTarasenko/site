@@ -288,7 +288,7 @@ footer p {
 }
 
 .product-list li {
-    flex: 1 1 calc(33.333% - 20px); /* 3 карточки в ряд с отступами */
+    flex: 1 1 calc(33.333% - 20px); /* 3 карточки в ряд на больших экранах */
     max-width: calc(33.333% - 20px); /* Ограничиваем ширину карточки */
     box-sizing: border-box; /* Учитываем padding и border в ширине */
     display: flex;
@@ -301,10 +301,18 @@ footer p {
     text-align: center;
 }
 
+/* Медиа-запрос для экранов с шириной меньше 1200px (средние экраны, например ноутбуки) */
+@media screen and (max-width: 1200px) {
+    .product-list li {
+        flex: 1 1 calc(50% - 20px); /* 2 карточки в ряд на экранах 1200px и меньше */
+        max-width: calc(50% - 20px);
+    }
+}
+
 /* Медиа-запрос для экранов с шириной меньше 1024px (планшеты и меньше) */
 @media screen and (max-width: 1024px) {
     .product-list li {
-        flex: 1 1 calc(50% - 20px); /* 2 карточки в ряд на планшетах */
+        flex: 1 1 calc(50% - 20px); /* 2 карточки в ряд */
         max-width: calc(50% - 20px);
     }
 }
@@ -342,4 +350,3 @@ footer p {
 .amount-input {
     width: 40px;
 }
-
