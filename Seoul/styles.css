@@ -279,12 +279,13 @@ footer p {
 }
 
 .product-list {
-    display: flex;
+    display: flex; 
     flex-wrap: wrap;
     gap: 20px;
     list-style-type: none; /* Убираем точки у списка */
     padding: 0; /* Убираем отступы у ul */
     margin: 0; /* Убираем внешние отступы у ul */
+    justify-content: center; /* Центрируем содержимое по горизонтали */
 }
 
 .product-list li {
@@ -299,13 +300,14 @@ footer p {
     background-color: #f5e3d0;
     border-radius: 5px;
     text-align: center;
+    overflow: hidden; /* Чтобы изображение не выходило за пределы карточки */
 }
 
 .product-list img {
-    max-width: 100%; /* Ограничиваем ширину изображения, чтобы оно не выходило за пределы контейнера */
-    height: auto; /* Высота будет автоматически изменяться для сохранения пропорций */
-    object-fit: contain; /* Обеспечивает правильное масштабирование изображения */
-    border-radius: 5px; /* Закругление углов */
+    width: 100%; /* Картинка будет занимать всю ширину карточки */
+    height: auto; /* Высота будет автоматически рассчитана для сохранения пропорций */
+    object-fit: cover; /* Масштабирование изображения с сохранением пропорций */
+    border-radius: 5px; /* Закругленные углы */
     margin-bottom: 10px; /* Отступ снизу */
 }
 
@@ -325,4 +327,18 @@ footer p {
 
 .amount-input {
     width: 40px;
+}
+
+/* Для небольших экранов (например, мобильных устройств) */
+@media (max-width: 768px) {
+    .product-list li {
+        flex: 1 1 calc(50% - 20px); /* 2 карточки в ряд */
+    }
+}
+
+/* Для еще меньших экранов (например, телефонов в портретной ориентации) */
+@media (max-width: 480px) {
+    .product-list li {
+        flex: 1 1 100%; /* 1 карточка в ряд */
+    }
 }
